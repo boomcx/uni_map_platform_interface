@@ -1,0 +1,21 @@
+name: uni_map_platform_interface
+description: Uni Map Platform Interface.
+version: 0.7.0
+publish_to: none
+
+environment:
+  sdk: '>=3.9.2 <4.0.0'
+  flutter: '>=3.35.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  foundation_fluttify:
+    path: ../foundation_fluttify
+  core_location_fluttify:
+    path: ../core_location_fluttify
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: any
