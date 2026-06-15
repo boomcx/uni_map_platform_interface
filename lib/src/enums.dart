@@ -26,15 +26,7 @@ enum Language {
 }
 
 /// 坐标类型
-enum CoordType {
-  GPS,
-  Google,
-  MapBar,
-  Baidu,
-  MapABC,
-  SosoMap,
-  Aliyun,
-}
+enum CoordType { GPS, Google, MapBar, Baidu, MapABC, SosoMap, Aliyun }
 
 /// 线段末端处样式
 enum LineCapType {
@@ -90,10 +82,7 @@ enum MyLocationType {
 }
 
 /// 动画重复方式
-enum RepeatMode {
-  Restart,
-  Reverse,
-}
+enum UniRepeatMode { Restart, Reverse }
 
 enum RideType {
   /// 电动车

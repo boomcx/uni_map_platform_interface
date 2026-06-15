@@ -72,8 +72,10 @@ class MarkerOption {
     this.iconsProvider,
     this.animationFps,
     this.infoWindow,
-  }) : assert(!(widget != null && iconProvider != null),
-            'widget和iconProvider不能同时设置! ');
+  }) : assert(
+         !(widget != null && iconProvider != null),
+         'widget和iconProvider不能同时设置! ',
+       );
 
   /// 经纬度
   final LatLng coordinate;
@@ -264,10 +266,7 @@ class CircleOption {
 /// TileOverlay创建参数
 @immutable
 class HeatmapTileOption {
-  HeatmapTileOption({
-    required this.coordinateList,
-    this.gradient,
-  });
+  HeatmapTileOption({required this.coordinateList, this.gradient});
 
   /// 中心点经纬度
   final List<LatLng> coordinateList;
@@ -333,10 +332,7 @@ class UrlTileOption {
 /// 海量点创建参数
 @immutable
 class MultiPointOption {
-  MultiPointOption({
-    required this.pointList,
-    this.iconProvider,
-  });
+  MultiPointOption({required this.pointList, this.iconProvider});
 
   /// 点列表
   final List<PointOption> pointList;
@@ -385,13 +381,7 @@ class PointOption {
 /// 地图移动
 @immutable
 class MapMove {
-  MapMove({
-    this.coordinate,
-    this.zoom,
-    this.tilt,
-    this.bearing,
-    this.isAbroad,
-  });
+  MapMove({this.coordinate, this.zoom, this.tilt, this.bearing, this.isAbroad});
 
   /// 经纬度
   final LatLng? coordinate;
@@ -482,7 +472,7 @@ class MarkerAnimation {
 
   final Duration duration;
   final int repeatCount;
-  final RepeatMode repeatMode;
+  final UniRepeatMode repeatMode;
   final double? fromValue;
   final double? toValue;
 
@@ -498,7 +488,7 @@ class ScaleMarkerAnimation extends MarkerAnimation {
   ScaleMarkerAnimation({
     Duration duration = const Duration(seconds: 1),
     int repeatCount = 1,
-    RepeatMode repeatMode = RepeatMode.Reverse,
+    UniRepeatMode repeatMode = UniRepeatMode.Reverse,
     double? fromValue,
     double? toValue,
   }) : super(duration, repeatCount, repeatMode, fromValue, toValue);
@@ -515,7 +505,7 @@ class AlphaMarkerAnimation extends MarkerAnimation {
   AlphaMarkerAnimation({
     Duration duration = const Duration(seconds: 1),
     int repeatCount = 1,
-    RepeatMode repeatMode = RepeatMode.Reverse,
+    UniRepeatMode repeatMode = UniRepeatMode.Reverse,
     double? fromValue,
     double? toValue,
   }) : super(duration, repeatCount, repeatMode, fromValue, toValue);
@@ -532,7 +522,7 @@ class RotateMarkerAnimation extends MarkerAnimation {
   RotateMarkerAnimation({
     Duration duration = const Duration(seconds: 1),
     int repeatCount = 1,
-    RepeatMode repeatMode = RepeatMode.Reverse,
+    UniRepeatMode repeatMode = UniRepeatMode.Reverse,
     double? fromValue,
     double? toValue,
   }) : super(duration, repeatCount, repeatMode, fromValue, toValue);
@@ -549,7 +539,7 @@ class TranslateMarkerAnimation extends MarkerAnimation {
   TranslateMarkerAnimation({
     Duration duration = const Duration(seconds: 1),
     int repeatCount = 1,
-    RepeatMode repeatMode = RepeatMode.Reverse,
+    UniRepeatMode repeatMode = UniRepeatMode.Reverse,
     required this.coordinate,
   }) : super(duration, repeatCount, repeatMode, null, null);
 
@@ -568,7 +558,7 @@ class MarkerAnimationSet extends MarkerAnimation {
     this.animationSet,
     required Duration duration,
     int repeatCount = 1,
-    RepeatMode repeatMode = RepeatMode.Reverse,
+    UniRepeatMode repeatMode = UniRepeatMode.Reverse,
   }) : super(duration, repeatCount, repeatMode, null, null);
 
   final List<MarkerAnimation>? animationSet;
