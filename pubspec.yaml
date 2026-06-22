@@ -11,11 +11,11 @@ dependencies:
   flutter:
     sdk: flutter
   foundation_fluttify:
-    path: ../foundation_fluttify
-    # git: https://github.com/boomcx/foundation_fluttify
+    # path: ../foundation_fluttify
+    git: https://github.com/boomcx/foundation_fluttify
   core_location_fluttify:
-    path: ../core_location_fluttify
-    # git: https://github.com/boomcx/core_location_fluttify
+    # path: ../core_location_fluttify
+    git: https://github.com/boomcx/core_location_fluttify
 
 dev_dependencies:
   flutter_test:
